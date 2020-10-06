@@ -6,9 +6,12 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 15:31:00 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/06 17:05:24 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/10/06 17:32:08 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef PONY_HPP
+#define PONY_HPP
 
 #include <string>
 #include <iostream>
@@ -29,3 +32,5 @@ public:
 	~Pony();
 	void	draw_pony(std::string unicorn);
 };
+
+#endif
