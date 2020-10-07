@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 10:40:25 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/07 10:56:19 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/10/07 11:08:58 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ ZombieHorde::~ZombieHorde()
 	return ;
 }
 
-std::string		ZombieHorde::random_name(void)
+std::string		ZombieHorde::random_name(void) const
 {
 	std::string random_name;
 	std::string	zombie_name [] = {"Alfred", "Walkers", "Fleshy Zombie", "Fungus Zombie",
@@ -44,7 +44,7 @@ std::string		ZombieHorde::random_name(void)
 	return random_name;
 }
 
-void			ZombieHorde::announce(Zombie *zombies, int n)
+void			ZombieHorde::announce(Zombie *zombies, int n) const
 {
 	int		i = 0;
 
