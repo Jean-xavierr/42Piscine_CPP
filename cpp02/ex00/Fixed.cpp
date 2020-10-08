@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 16:02:33 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/08 17:26:18 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/10/08 17:33:55 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Fixed::~Fixed(void)
 Fixed		&Fixed::operator=(Fixed const &instance)
 {
 	std::cout << "Assignation operator called" << std::endl;
-	this->fixed_point = instance.fixed_point;
+	this->fixed_point = instance.getRawBits();
 	return *this;
 }
 
