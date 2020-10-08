@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 16:02:33 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/08 17:13:06 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/10/08 17:26:18 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,6 @@ void	Fixed::setRawBits(int const raw)
 
 std::ostream	&operator<<(std::ostream &o, Fixed const &instance)
 {
-	o << &instance << std::endl;
+	o << instance.getRawBits() << std::endl;
 	return o;
 }
