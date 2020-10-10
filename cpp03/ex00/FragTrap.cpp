@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 11:30:05 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/09 22:14:58 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/10/10 10:50:55 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void		FragTrap::init_var(void)
 	return ;
 }
 
-FragTrap::FragTrap(void)
+FragTrap::FragTrap(void) : name("default")
 {
 	init_var();
 	std::cout << "Séquence d'initiation terminée." << std::endl;
