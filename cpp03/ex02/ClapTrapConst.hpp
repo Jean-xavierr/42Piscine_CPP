@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrapConst.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 16:23:26 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/10 16:48:28 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/10/13 12:29:42 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 /*
 ** Acronym ST is to differentiate Define
-** ScavTrap from FrapTrap
+** ClapTrap from FrapTrap
 */
 
 #define CT_LEVEL 1
@@ -33,7 +33,7 @@
 
 /*
 ** Define for display messages 
-** of the ScavTrap class
+** of the ClapTrap class
 */
 
 #define CT_TEXT_PRESENTATION	"Je suis" << COLOR_GREEN " CL4P-TP "		\
@@ -68,7 +68,7 @@
 
 /*
 ** Define for the getValue function
-** To retrieve all the attributes of the ScavTrap Class
+** To retrieve all the attributes of the ClapTrap Class
 */
 
 #define CT_GET_VALUE_NAME				COLOR_WHITE "Name:            " COLOR_RESET << this->name
