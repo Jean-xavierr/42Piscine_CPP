@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrapConst.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 17:55:18 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/10 12:09:17 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/10/13 17:54:59 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@
 
 #define GET_VALUE_NAME				COLOR_WHITE "Name:            " COLOR_RESET << this->name
 #define GET_VALUE_HIT_POINT 		COLOR_WHITE "Life:            "	COLOR_RESET << this->hit_points	<< "/" << this->max_hit_points
-#define GET_VALUE_ENERGY			COLOR_WHITE "Energy:          " COLOR_RESET	<< this->energy_points << "/" << this->max_hit_points
+#define GET_VALUE_ENERGY			COLOR_WHITE "Energy:          " COLOR_RESET	<< this->energy_points << "/" << this->max_hit_energy
 #define GET_VALUE_LEVEL				COLOR_WHITE "Level:           " COLOR_RESET << this->level
 #define GET_VALUE_MELEE_ATTACK		COLOR_WHITE "Melee attack:    " COLOR_RESET << this->melee_attack_damage
 #define GET_VALUE_RANGED_ATTACK		COLOR_WHITE "Ranged attack:   " COLOR_RESET << this->ranged_attack_damage 

@@ -6,7 +6,7 @@
 /*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 12:17:35 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/13 15:24:52 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/10/13 17:54:52 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@
 
 #define NT_GET_VALUE_NAME				COLOR_WHITE "Name:            " COLOR_RESET << this->name
 #define NT_GET_VALUE_HIT_POINT 			COLOR_WHITE "Life:            "	COLOR_RESET << this->hit_points	<< "/" << this->max_hit_points
-#define NT_GET_VALUE_ENERGY				COLOR_WHITE "Energy:          " COLOR_RESET	<< this->energy_points << "/" << this->max_hit_points
+#define NT_GET_VALUE_ENERGY				COLOR_WHITE "Energy:          " COLOR_RESET	<< this->energy_points << "/" << this->max_hit_energy
 #define NT_GET_VALUE_LEVEL				COLOR_WHITE "Level:           " COLOR_RESET << this->level
 #define NT_GET_VALUE_MELEE_ATTACK		COLOR_WHITE "Melee attack:    " COLOR_RESET << this->melee_attack_damage
 #define NT_GET_VALUE_RANGED_ATTACK		COLOR_WHITE "Ranged attack:   " COLOR_RESET << this->ranged_attack_damage 
