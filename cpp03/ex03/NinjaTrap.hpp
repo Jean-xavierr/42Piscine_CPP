@@ -6,7 +6,7 @@
 /*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 12:02:19 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/13 16:14:32 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/10/13 17:51:06 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,7 @@ protected:
 private:
 
 };
+
+std::ostream	&operator<<(std::ostream &o, NinjaTrap const &i);
 
 #endif

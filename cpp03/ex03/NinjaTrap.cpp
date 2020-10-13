@@ -6,7 +6,7 @@
 /*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 12:06:25 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/13 16:15:46 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/10/13 17:51:30 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,4 +152,10 @@ void 		NinjaTrap::ninjaShoebox(FragTrap &trap)
 	}
 	else
 		std::cout << NT_TEXT_NO_ENERGY << std::endl;
+}
+
+std::ostream	&operator<<(std::ostream &o, NinjaTrap const &i)
+{
+	o << i.getValues();
+	return o;
 }

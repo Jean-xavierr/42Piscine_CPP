@@ -6,7 +6,7 @@
 /*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 11:30:08 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/13 16:14:39 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/10/13 17:52:11 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int			main(void)
 	ninja->ninjaShoebox(scav);
 	ninja->ninjaShoebox(clap);
 	std::cout << std::endl << std::endl;
+	std::cout << *ninja << std::endl;
 	delete ninja;
 	return (0);
 }
