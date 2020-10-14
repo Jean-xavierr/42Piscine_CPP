@@ -6,7 +6,7 @@
 /*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 16:58:09 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/13 18:33:04 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/10/14 18:32:18 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class	Sorcerer
 {
 public:
 
-	Sorcerer(void);
 	Sorcerer(std::string name, std::string title);
 	Sorcerer(Sorcerer const &src);
 	Sorcerer &operator=(Sorcerer const &src);
@@ -32,6 +31,7 @@ public:
 	void			polymorph(Victim const &victim) const;
 
 private:
+	Sorcerer(void);
 	std::string		name;
 	std::string		title;
 
