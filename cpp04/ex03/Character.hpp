@@ -6,7 +6,7 @@
 /*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 17:41:21 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/15 18:39:05 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/10/16 11:09:42 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ public:
 protected:
 	std::string		name;
 	AMateria		*inventory[4];
-	unsigned int	countMateria;
+	int				countMateria;
 
 private:
 	Character(void);

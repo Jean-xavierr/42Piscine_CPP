@@ -6,7 +6,7 @@
 /*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 17:04:40 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/15 18:23:13 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/10/16 11:54:06 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define AMATERIA_HPP
 
 #include <iostream>
+class AMateria; // forward declarations
 #include "ICharacter.hpp"
 
 class	AMateria

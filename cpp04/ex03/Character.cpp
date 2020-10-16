@@ -6,7 +6,7 @@
 /*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 17:41:13 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/15 18:45:31 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/10/16 12:10:00 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Character::Character(Character const &src)
 
 Character::~Character(void)
 {
-	if (this->inventory)
+	if (this->inventory[0])
 	{
 		for (int i = 0; i < this->countMateria; i++)
 			delete this->inventory[i];
@@ -42,16 +42,12 @@ Character::~Character(void)
 Character	&Character::operator=(Character const &src)
 {
 	this->name = src.name;
-	if (this->inventory)
-	{
+	if (this->inventory[0])
 		for (int i = 0; i < this->countMateria; i++)
 			delete this->inventory[i];
-	}
-	if (src.inventory)
-	{
+	if (src.inventory[0])
 		for (int i = 0; i < src.countMateria; i++)
 			this->inventory[i] = src.inventory[i];
-	}
 	this->countMateria = src.countMateria;
 	return (*this);
 }
@@ -65,18 +61,23 @@ void	Character::equip(AMateria* m)
 {
 	if (this->countMateria == 4 || !m)
 		return ;
-	this->inventory[this->countMateria - 1] = m;
+	this->inventory[this->countMateria] = m;
 	this->countMateria++;
 }
 
 void	Character::unequip(int idx)
 {
-	if (idx > 4)
+	if (idx < 0 || idx >= this->countMateria || this->inventory[idx] == NULL)
 		return ;
-	this->inventory[idx] = NULL;
+	this->countMateria -= 1;
+	for (int i = idx; i < 3; i++)
+		this->inventory[i] = this->inventory[i + 1];
+	this->inventory[3] = NULL;
 }
 
 void	Character::use(int idx, ICharacter& target)
 {
-
+	if (idx < 0 || idx >= this->countMateria || this->inventory[idx] == NULL)
+		return ;
+	this->inventory[idx]->use(target);
 }
