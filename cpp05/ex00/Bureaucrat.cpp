@@ -6,20 +6,19 @@
 /*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 15:37:54 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/16 15:41:26 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/10/19 14:13:50 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(void)
+Bureaucrat::Bureaucrat(std::string const name, int grade) : name(name),
+grade(grade)
 {
-	return ;
-}
-
-Bureaucrat::Bureaucrat(std::string const name, unsigned int grade) : name(name)
-{
-	
+	if (this->grade < 1)
+		throw Bureaucrat::GradeTooHighException();
+	else if (this->grade > 150)
+		throw Bureaucrat::GradeTooLowException();
 	return ;
 }
 
@@ -35,21 +34,46 @@ Bureaucrat::~Bureaucrat(void)
 
 Bureaucrat	&Bureaucrat::operator=(Bureaucrat const &src)
 {
+	this->grade = src.grade;
 	return (*this);
 }
 
 std::string		const	Bureaucrat::getName(void) const
 {
-
+	return this->name;
 }
 
-unsigned int			Bureaucrat::getGrade(void)	const
+int						Bureaucrat::getGrade(void)	const
 {
-
+	return this->grade;
 }
 
-std::ostream	&operator<<(std::ostream &s, Bureaucrat const &i)
+void					Bureaucrat::incrementGrade(void)
 {
-	s /*<< DATA*/ << std::endl;
-	return s;
+	if (this->grade - 1 < 1)
+		throw Bureaucrat::GradeTooHighException();
+	this->grade -= 1;
+}
+
+void					Bureaucrat::decrementGrade(void)
+{
+	if (this->grade + 1 > 150)
+		throw Bureaucrat::GradeTooLowException();
+	this->grade += 1;
+}
+
+const char				*Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return "Error: Grade too high.";
+}
+
+const char				*Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return "Error: Grade too low.";
+}
+
+std::ostream	&operator<<(std::ostream &o, Bureaucrat const &i)
+{
+	o << i.getName() << " bureaucrat grade <" << i.getGrade() << ">";
+	return o;
 }

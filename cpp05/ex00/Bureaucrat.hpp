@@ -6,7 +6,7 @@
 /*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 15:35:40 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/16 15:43:18 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/10/19 14:16:39 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,36 @@
 # define BUREAUCRAT_HPP
 
 #include <iostream>
+#include <string>
 
-class	Bureaucrat
+class Bureaucrat
 {
 public:
 
-	Bureaucrat(std::string const name, unsigned int grade);
+	Bureaucrat(std::string const name, int grade);
 	Bureaucrat(Bureaucrat const &src);
-	Bureaucrat &operator=(Bureaucrat const &src);
 	virtual ~Bureaucrat();
+	Bureaucrat &operator=(Bureaucrat const &src);
 
-	std::string		const getName(void) const;
-	unsigned int	getGrade(void)	const;
-	void			increment(void);
-	void			decrement(void);
+	std::string const	getName(void) const;
+	int 				getGrade(void) const;
+	void 				incrementGrade(void);
+	void 				decrementGrade(void);
+	class GradeTooHighException: public std::exception {
+		virtual const char *what() const throw();
+	};
+	class GradeTooLowException: public std::exception {
+		virtual const char *what() const throw();
+	};
 
 private:
 
+	Bureaucrat();
+
 	std::string const	name;
-	unsigned int		grade;
-
-	Bureaucrat(void);
-
+	int 				grade;
 };
 
-std::ostream	&operator<<(std::ostream &o, Bureaucrat const &i);
+std::ostream 	&operator<<(std::ostream &o, Bureaucrat const &i);
 
 #endif
