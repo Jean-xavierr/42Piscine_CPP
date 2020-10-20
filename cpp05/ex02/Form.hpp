@@ -6,7 +6,7 @@
 /*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/19 14:23:57 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/19 15:27:07 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/10/20 16:03:51 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,10 @@ public:
 	class GradeTooLowException: public std::exception {
 		virtual const char *what() const throw();
 	};
+	class UnsignedForm: public std::exception {
+		virtual const char	*what() const throw();
+	};
+	virtual void	execute(Bureaucrat const &executor) const;
 
 private:
 	Form(void);

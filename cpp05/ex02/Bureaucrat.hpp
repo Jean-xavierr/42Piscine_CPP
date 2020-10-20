@@ -6,7 +6,7 @@
 /*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 15:35:40 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/19 15:34:29 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/10/20 15:49:20 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ public:
 	class GradeTooLowException: public std::exception {
 		virtual const char *what() const throw();
 	};
+	void		executeForm(Form const &form);
 
 private:
 

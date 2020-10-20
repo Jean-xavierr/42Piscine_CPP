@@ -6,7 +6,7 @@
 /*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/19 17:31:52 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/19 17:56:22 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/10/20 16:06:57 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,23 +35,54 @@ ShrubberyCreationForm	&ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 	return (*this);
 }
 
-std::string				ShrubberyCreationForm::displayThree(void)
+const char				*ShrubberyCreationForm::ErrorFile::what() const throw()
 {
-	return ;
+	return "Error: openning file";
+}
+
+std::string				ShrubberyCreationForm::displayThree(void) const
+{
+	std::stringstream tree;
+
+	tree << "        # #### ####"			<< std::endl \
+	<<		"      ### \\/#|### |/####"		<< std::endl \
+	<<		"     ##\\/#/ \\||/##/_/##/_#"	<< std::endl \
+	<<		"   ###  \\/###|/ \\/ # ###"	<< std::endl \
+	<<		" ##_\\_#\\_\\## | #/###_/_####"<< std::endl \
+	<<		"## #### # \\ #| /  #### ##/##"	<< std::endl \
+	<<		" __#_--###`  |{,###---###-~"	<< std::endl \
+	<<		"           \\ }{"				<< std::endl \
+	<<		"            }}{"				<< std::endl \
+	<<		"            }}{"				<< std::endl \
+	<<		"            {{}"				<< std::endl \
+	<<		"      , -=-~{ .-^- _"			<< std::endl << std::endl << std::endl \
+	<<		"          &&& &&  & &&"		<< std::endl \
+	<<		"      && &\\/&\\|& ()|/ @, &&"	<< std::endl \
+	<<		"      &\\/(/&/&||/& /_/)_&/_&"	<< std::endl \
+	<<		"    &() &\\/&|()|/&\\/ '%\" & ()"	<< std::endl \
+	<<		"  &_\\_&&_\\ |& |&&/&__%_/_& &&"	<< std::endl \
+	<<		"&&   && & &| &| /& & % ()& /&&"	<< std::endl \
+	<<		" ()&_---()&\\&\\|&&-&&--%---()~"	<< std::endl \
+	<<		"     &&     \\|||"					<< std::endl \
+	<<		"             |||"					<< std::endl \
+	<<		"             |||"					<< std::endl \
+	<<		"             |||"					<< std::endl \
+	<<		"       , -=-~  .-^- _"				<< std::endl;
+	return tree.str();
 }
 
 
-void					ShrubberyCreationForm::createFile(void)
+void					ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
 	std::ofstream	newFile;
 
+	Form::execute(executor);
 	newFile.open(this->target + "_shrubbery");
 	if (newFile.is_open())
 	{
 		newFile << this->displayThree();
+		newFile.close();
 	}
 	else
-	{
-		/* error code */
-	}
+		ShrubberyCreationForm::ErrorFile();
 }

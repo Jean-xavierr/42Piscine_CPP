@@ -6,7 +6,7 @@
 /*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/19 14:39:13 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/19 15:30:44 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/10/20 17:52:10 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,11 +70,24 @@ const char	*Form::GradeTooLowException::what() const throw()
 	return "Error: Grade too low.";
 }
 
+const char	*Form::UnsignedForm::what() const throw()
+{
+	return "Error: Unsigned form";
+}
+
 void		Form::beSigned(Bureaucrat &bureaucrat)
 {
 	if (bureaucrat.getGrade() > this->signGrade)
 		throw Form::GradeTooLowException();
 	this->sign = true;
+}
+
+void			Form::execute(Bureaucrat const &executor) const
+{
+	if (executor.getGrade() > this->execGrade)
+		throw Form::GradeTooLowException();
+	else if (this->sign == false)
+		throw Form::UnsignedForm();
 }
 
 std::ostream	&operator<<(std::ostream &o, Form const &i)
