@@ -6,7 +6,7 @@
 /*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 15:32:58 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/23 15:29:57 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/10/26 15:09:14 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,19 @@
 #include <iomanip>
 #include <cctype>
 
-void		convert_int(double n, std::stringstream &ss)
+void		convert_int(double n, std::string s)
 {
-	if (!isdigit(ss.str()[0]))
+
+	if (!isdigit(s[0]) && (s.length() == 3 || s.length() == 4))
 		std::cout << "int: impossible" << std::endl;
 	else
 		std::cout << "int: " << static_cast<int>(n) << std::endl;
 }
 
-void		convert_char(double n, std::stringstream &ss)
+void		convert_char(double n, std::string s)
 {
-	if (!isdigit(ss.str()[0]))
+
+	if (!isdigit(s[0]) && (s.length() >= 3|| s.length() == 4))
 		std::cout << "char: impossible" << std::endl;
 	else if (n > 32 && n < 127)
 		std::cout << "char: '" << static_cast<char>(n) << "'" << std::endl;
@@ -39,12 +41,16 @@ int			main(int ac, char **av)
 		std::cout << "Usage: ./convert [number]" << std::endl;
 	else
 	{
-		std::stringstream	ss(av[1]);
+		std::string			s;
 		double				n;
-		ss >> n;
-
-		convert_char(n, ss);
-		convert_int(n, ss);
+		
+		s = av[1];
+		if (!isdigit(s[0]) && s.length() == 1)
+			n = static_cast<int>(s[0]);
+		else
+			n = atof(av[1]);
+		convert_char(n, s);
+		convert_int(n, s);
 		std::cout << "float: " << std::setprecision(1) << std::fixed << static_cast<float>(n) << "f" << std::endl;
 		std::cout << "double: " << static_cast<double>(n) << std::endl;
 	}
