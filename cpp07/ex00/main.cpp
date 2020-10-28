@@ -6,7 +6,7 @@
 /*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 11:06:08 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/28 11:26:11 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/10/28 12:00:52 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int			main(void)
 	std::cout << "nb2: " << nb2 << " | nb3: " << nb3 << std::endl;
 	std::cout << "return: " << min<int>(nb2, nb3) << std::endl << std::endl;
 	std::cout << "char: " << a << " | char: " << b << std::endl;
-	std::cout << "return: " << max<char>(a, b) << std::endl << std::endl;
+	std::cout << "return: " << min<char>(a, b) << std::endl << std::endl;
 
 
 	std::cout << "Test max function" << std::endl;
