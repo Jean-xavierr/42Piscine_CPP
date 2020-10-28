@@ -6,7 +6,7 @@
 /*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 11:06:08 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/28 11:23:43 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/10/28 11:26:11 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,20 @@ int			main(void)
 	std::cout << "- swap -" << std::endl;
 	std::cout << "after: " << nb1 << std::endl;
 	std::cout << "after: " << nb3 << std::endl << std::endl;
+
+	std::cout << "Main ex00" << std::endl;
+	int e = 2;
+	int f = 3;
+	::swap( e, f );
+	std::cout << "e = " << e << ", f = " << f << std::endl;
+	std::cout << "min( e, f ) = " << ::min( e, f ) << std::endl;
+	std::cout << "max( e, f ) = " << ::max( e, f ) << std::endl;
+	std::string c = "chaine1";
+	std::string d = "chaine2";
+	::swap(c, d);
+	std::cout << "c = " << c << ", d = " << d << std::endl;
+	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
+	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
 
 	return 0;
 }
