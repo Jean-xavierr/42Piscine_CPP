@@ -1,14 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easyfind.cpp                                       :+:      :+:    :+:   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:44:58 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/11/03 17:12:31 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/04 14:34:36 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef EASYFIND_HPP
+#define EASYFIND_HPP
 
 #include <iostream>
 #include <list>
@@ -25,3 +28,5 @@ int		easyfind(T &container, int i)
 		throw std::exception();
 	return *it;
 }
+
+#endif
