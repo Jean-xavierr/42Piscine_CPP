@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 14:30:28 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/11/04 17:02:57 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/05 16:52:57 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class	Span
 public:
 	Span(unsigned int n);
 	Span(Span const &instance);
-	~Span();
+	virtual ~Span();
 	Span	&operator=(Span const &instance);
 	
 	void	addNumber(int nb);
