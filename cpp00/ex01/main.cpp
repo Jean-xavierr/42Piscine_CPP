@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 19:06:36 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/06 14:33:07 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/09 16:34:08 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		add_contact(Phonebook *contact, int *index)
 {	
-	if (*index > 8)
+	if (*index >= 8)
 		std::cout << phonebook_complete << std::endl;
 	else
 	{
