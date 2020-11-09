@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 17:01:51 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/05 18:37:12 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/09 16:18:32 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ int		main(int ac, char **av)
 		while (*av)
 		{
 			megaphone(*av);
-			std::cout << " ";
 			av++;
 		}
 		std::cout << std::endl;
