@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 19:07:20 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/06 14:12:07 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/10 13:07:14 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,19 @@ void		Phonebook::add_contact(void)
 	std::cout << clear_terminal;
 	std::cout << "Conctat ADD : " << this->first_name << " " << this->last_name << std::endl;
 	return ;
+}
+
+std::string		Phonebook::getFirstName(void) const
+{
+	return this->first_name;
+}
+
+std::string		Phonebook::getLastName(void) const
+{
+	return this->last_name;
+}
+
+std::string		Phonebook::getNickName(void) const
+{
+	return this->nickname;
 }

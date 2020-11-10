@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 19:06:36 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/11/10 11:10:07 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/10 13:31:39 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,18 @@ void		add_contact(Phonebook *contact, int *index)
 void		get_contact(Phonebook contact, std::string *first_name, 
 std::string	*last_name, std::string	*nickname)
 {
-	if (contact.first_name.length() > 10)
-		first_name->replace(0, 9, contact.first_name, 0, 9);
+	if (contact.getFirstName().length() > 10)
+		first_name->replace(0, 9, contact.getFirstName(), 0, 9);
 	else
-		*first_name = contact.first_name;
-	if (contact.last_name.length() > 10)
-		last_name->replace(0, 9, contact.last_name, 0, 9);
+		*first_name = contact.getFirstName();
+	if (contact.getLastName().length() > 10)
+		last_name->replace(0, 9, contact.getLastName(), 0, 9);
 	else
-		*last_name = contact.last_name;
-	if (contact.nickname.length() > 10)
-		nickname->replace(0, 9, contact.nickname, 0, 9);
+		*last_name = contact.getLastName();
+	if (contact.getNickName().length() > 10)
+		nickname->replace(0, 9, contact.getNickName(), 0, 9);
 	else
-		*nickname = contact.nickname;
+		*nickname = contact.getNickName();
 }
 
 void		select_index(Phonebook *contact, int *index)
@@ -67,15 +67,18 @@ void		search_contact(Phonebook *contact, int *index)
 {
 	int			i = 0;
 	int			n = 0;
-	std::string	first_name	("         .");
-	std::string	last_name	("         .");
-	std::string	nickname	("         .");
+	std::string	first_name;
+	std::string	last_name;
+	std::string	nickname;
 
 	if (*index > 0)
 	{
 		display_search();
 		while (i < *index)
 		{
+			first_name = 	("         .");
+			last_name =		("         .");
+			nickname = 		("         .");
 			get_contact(contact[i], &first_name, &last_name, &nickname);
 			display_contact(i, first_name, last_name, nickname);
 			i++;
