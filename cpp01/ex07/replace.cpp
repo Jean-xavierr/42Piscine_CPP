@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 18:07:52 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/07 21:18:35 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/10 16:58:09 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ void		replace(std::string path, std::string s1, std::string s2)
 	std::ofstream	new_file;
 
 	file.open(path);
-	new_file.open(path + ".replace");
   	if (file.is_open())
   	{
+		new_file.open(path + ".replace");
 		if (new_file.is_open())
 		{
 			while (std::getline (file, line))
