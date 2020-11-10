@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 19:06:36 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/11/09 16:34:08 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/10 11:10:07 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,8 +82,8 @@ void		search_contact(Phonebook *contact, int *index)
 		}
 		std::cout << display_line << std::endl << std::endl;
 		select_index(contact, index);
+		std::cout << std::endl;
 	}
-	std::cout << std::endl;
 }
 
 int			check_argument(Phonebook *contact, int *index, std::string buf)
