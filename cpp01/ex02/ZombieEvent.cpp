@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 21:14:49 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/07 10:18:51 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/09 16:58:48 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ ZombieEvent::~ZombieEvent()
 {
 	return ;
 }
+
 void	ZombieEvent::setZombieType(std::string type)
 {
 	this->type = type;
