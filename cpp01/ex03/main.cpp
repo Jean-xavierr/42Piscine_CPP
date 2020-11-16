@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 21:14:58 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/07 10:57:00 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/16 11:43:51 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 int			main(void)
 {
 	ZombieHorde		zombies(20);
+	// zombies.announce();
 	return 0;
 }
