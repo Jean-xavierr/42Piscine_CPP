@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 15:31:00 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/06 17:32:08 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/16 11:09:55 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@
 class Pony
 {
 private:
-	/* data */
-public:
 
 	std::string	name;
 	std::string	color;
 	std::string	unicorn;
 	int			weight;
 	int			age;
+
+public:
 
 	Pony(std::string name, std::string color, std::string unicorn, int weight, int age);
 	~Pony();
