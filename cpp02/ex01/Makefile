@@ -6,7 +6,7 @@
 #    By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/10 18:08:10 by Jeanxavier        #+#    #+#              #
-#    Updated: 2020/11/10 18:08:36 by Jeanxavier       ###   ########.fr        #
+#    Updated: 2020/11/17 11:29:37 by Jeanxavier       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ OBJ = $(SRC:.cpp=.o)
 
 CC = clang++
 
-CFLAGS = -Wall -Wextra -Werror
+CPPFLAGS = -Wall -Wextra -Werror
 
 all : $(NAME)
 
