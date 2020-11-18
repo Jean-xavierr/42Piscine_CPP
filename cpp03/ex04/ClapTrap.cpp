@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 16:14:23 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/11/18 11:14:30 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/18 15:18:22 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ std::string		ClapTrap::getValues(void) const
 
 ClapTrap		&ClapTrap::operator=(ClapTrap const &src)
 {
+	this->name = src.name;
 	this->hit_points = src.hit_points;
 	this->energy_points = src.energy_points;
 	this->max_hit_points = src.max_hit_points;
