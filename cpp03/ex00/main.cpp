@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 11:30:08 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/11/18 14:26:46 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/18 14:57:55 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ int			main(void)
 	srand (time(NULL));
 	FragTrap robot1("Dedsec");
 	FragTrap robot2("R2D2");
-
-	robot3.rangedAttack("TOTO");
 
 	std::cout << std::endl;
 	robot1.meleeAttack("R2D2");
