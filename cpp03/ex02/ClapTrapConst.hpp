@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 16:23:26 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/11/18 10:56:00 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/18 14:37:49 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,10 @@
 	<< COLOR_RESET " n'a pu " COLOR_YELLOW "d'énergie"						\
 	COLOR_RESET " ..."
 
-#define TEXT_REPAIRED	COLOR_GREEN "CL4P-TP " << this->name << 		\
-	COLOR_RESET " auto-répation " << COLOR_GREEN << amount 					\
-	<< COLOR_RESET << " points de vie" 
+#define TEXT_REPAIRED	COLOR_GREEN "CL4P-TP " << this->name << 	\
+	COLOR_RESET " c'est revissé " COLOR_GREEN << random_piece 		\
+	<< COLOR_RESET " ce qui lui rapporte " << COLOR_GREEN << amount	\
+	<< COLOR_RESET << " points de vie"  
 
 /*
 ** Define for the getValue function

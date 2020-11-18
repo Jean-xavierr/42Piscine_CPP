@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 11:30:08 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/11/18 10:54:37 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/18 14:39:10 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ int			main(void)
 	std::cout << std::endl << std::endl;
 	std::cout << "-----> ScavTrap Test <----" << std::endl;
 	scav.beRepaired(20);
-	scav.meleeAttack("Jeremouss");
+	scav.meleeAttack("R2D2");
 	frag.takeDamage(20);
-	scav.rangedAttack("Jeremouss");
+	scav.rangedAttack("R2D2");
 	frag.takeDamage(15);
 	scav.challengeNewcomer("R2D2");
 

@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 11:30:01 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/10 11:19:28 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/18 14:29:45 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	FragTrap();
 	FragTrap(std::string name);
 	FragTrap(FragTrap const &src);
-	~FragTrap();
+	virtual ~FragTrap();
 
 	FragTrap	&operator=(FragTrap const &src);
 	void		init_var(void);

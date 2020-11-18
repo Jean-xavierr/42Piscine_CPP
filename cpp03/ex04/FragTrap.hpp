@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 11:30:01 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/11/18 11:33:22 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/18 14:52:23 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ public:
 
 	FragTrap	&operator=(FragTrap const &src);
 	void		init_var(void);
+	void		initSuperTrap(void);
 	void		vaulthunter_dot_exe(std::string const &target);
 
 private:

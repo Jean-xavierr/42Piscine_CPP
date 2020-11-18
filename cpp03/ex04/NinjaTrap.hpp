@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 12:02:19 by jereligi          #+#    #+#             */
-/*   Updated: 2020/11/18 11:25:09 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/18 11:52:40 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ public:
 	virtual ~NinjaTrap();
 
 	void		init_var(void);
+	void 		ninjaShoebox(ClapTrap &trap);
 	void 		ninjaShoebox(NinjaTrap &trap);
     void 		ninjaShoebox(ScavTrap &trap);
     void 		ninjaShoebox(FragTrap &trap);

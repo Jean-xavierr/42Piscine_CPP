@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 12:06:25 by jereligi          #+#    #+#             */
-/*   Updated: 2020/11/18 11:16:18 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/18 14:49:09 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,18 @@ NinjaTrap		&NinjaTrap::operator=(NinjaTrap const &src)
 	this->ranged_attack_damage = src.ranged_attack_damage;
 	this->armor_damage_reduction = src.armor_damage_reduction;
 	return *this;
+}
+
+void 		NinjaTrap::ninjaShoebox(ClapTrap &trap)
+{
+	if (this->energy_points >= 20)
+	{
+		this->energy_points -= 20;
+		std::cout << NT_NINJA_ATTACK << std::endl;
+		trap.takeDamage(this->melee_attack_damage);
+	}
+	else
+		std::cout << TEXT_NO_ENERGY << std::endl;
 }
 
 void 		NinjaTrap::ninjaShoebox(NinjaTrap &trap)

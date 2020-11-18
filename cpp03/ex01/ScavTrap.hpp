@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 10:56:29 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/10 15:05:56 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/18 14:30:30 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	ScavTrap();
 	ScavTrap(std::string name);
 	ScavTrap(ScavTrap const &src);
-	~ScavTrap();
+	virtual ~ScavTrap();
 
 	ScavTrap	&operator=(ScavTrap const &src);
 	void		init_var(void);

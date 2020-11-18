@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 16:14:23 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/11/18 11:14:55 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/18 14:36:57 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,11 +105,25 @@ void		ClapTrap::takeDamage(unsigned int amount)
 
 void		ClapTrap::beRepaired(unsigned int amount)
 {
+	std::string random_piece;
+	std::string	piece [] = {
+		"un bras",
+		"une roue",
+		"un oeil",
+		"une antenne",
+		"un paquet de boulon"
+	};
+	if (rand_seed != time(NULL))
+	{
+		srand(time(NULL));
+		rand_seed = time(NULL);
+	}
+	random_piece = piece[rand() % 5];
 	this->hit_points += amount;
 	this->energy_points += amount;
-	if ((int)amount + this->hit_points > this->max_hit_points)
+	if (this->hit_points > this->max_hit_points)
 		this->hit_points = this->max_hit_points;
-	if ((int)amount + this->energy_points > this->max_hit_energy)
+	if (this->energy_points > this->max_hit_energy)
 		this->energy_points = this->max_hit_energy;
 	std::cout << TEXT_REPAIRED << std::endl;
 	return ;

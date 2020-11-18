@@ -6,13 +6,21 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 11:30:05 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/11/18 10:56:39 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/18 14:52:10 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
 int		rand_seed = 0;
+
+void		FragTrap::initSuperTrap(void)
+{
+	this->hit_points = 100;
+	this->max_hit_points = 100;
+	this->ranged_attack_damage = 20;
+	this->armor_damage_reduction = 5;
+}
 
 void		FragTrap::init_var(void)
 {

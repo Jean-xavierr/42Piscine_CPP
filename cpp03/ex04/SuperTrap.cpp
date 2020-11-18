@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 14:45:50 by jereligi          #+#    #+#             */
-/*   Updated: 2020/11/18 11:44:09 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/18 14:52:38 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void		SuperTrap::init_var(void)
 SuperTrap::SuperTrap(void) : ClapTrap(), FragTrap(), NinjaTrap()
 {
 	init_var();
+	initSuperTrap();
 	std::cout << "Séquence d'initiation de SUPER-TP terminée." << std::endl;
 	return ;
 }
@@ -36,6 +37,7 @@ SuperTrap::SuperTrap(void) : ClapTrap(), FragTrap(), NinjaTrap()
 SuperTrap::SuperTrap(std::string name) : ClapTrap(name), FragTrap(name), NinjaTrap(name)
 {
 	init_var();
+	initSuperTrap();
 	std::cout << "Séquence d'initiation de SUPER-TP terminée." << std::endl;
 	std::cout << "Je suis" << COLOR_RED" SUPER-TP "								\
 	<< name << COLOR_RESET " super machine ninja de la mort sans pitié !"	\

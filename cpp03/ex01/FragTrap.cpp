@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 11:30:05 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/10 14:15:36 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/18 14:30:01 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ std::string		FragTrap::getValues(void) const
 
 FragTrap		&FragTrap::operator=(FragTrap const &src)
 {
+	this->name = src.name;
 	this->hit_points = src.hit_points;
 	this->energy_points = src.energy_points;
 	this->max_hit_points = src.max_hit_points;
