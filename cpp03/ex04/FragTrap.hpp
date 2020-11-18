@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 11:30:01 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/13 12:44:50 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/11/18 11:33:22 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,39 +15,20 @@
 
 #include <iostream>
 #include <sstream>
-#include "FragTrapConst.hpp"
+#include "ClapTrap.hpp"
 
-class	FragTrap
+class	FragTrap : virtual public ClapTrap
 {
 public:
 
 	FragTrap();
 	FragTrap(std::string name);
 	FragTrap(FragTrap const &src);
-	~FragTrap();
+	virtual ~FragTrap();
 
 	FragTrap	&operator=(FragTrap const &src);
 	void		init_var(void);
-	void		rangedAttack(std::string const &target) const;
-	void		meleeAttack(std::string const &target) const;
-	void		takeDamage(unsigned int amount);
-	void		beRepaired(unsigned int amount);
 	void		vaulthunter_dot_exe(std::string const &target);
-	void		setName(std::string name);
-	std::string	getValues(void) const;
-	std::string	getName(void) const;
-
-protected:
-
-	std::string	name;
-	int			hit_points;
-	int			energy_points;
-	int			max_hit_points;
-	int			max_hit_energy;
-	int			level;
-	int			melee_attack_damage;
-	int			ranged_attack_damage;
-	int			armor_damage_reduction;
 
 private:
 	/* data */

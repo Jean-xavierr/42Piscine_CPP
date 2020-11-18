@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 11:30:08 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/13 17:55:58 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/11/18 11:37:43 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int			main(void)
 {
 	FragTrap	frag("R2D2");
 	ScavTrap	scav("Jeremouss");
-	ClapTrap	clap("Clapouss");
 	NinjaTrap	ninja("Ninja");
 	SuperTrap	super("Super");
 
@@ -30,7 +29,7 @@ int			main(void)
 	super.meleeAttack("R2D2");
 
 	std::cout << std::endl << std::endl;
-	super.ninjaShoebox(clap);
+	super.ninjaShoebox(ninja);
 	super.ninjaShoebox(scav);
 	super.ninjaShoebox(frag);
 	std::cout << std::endl << std::endl;

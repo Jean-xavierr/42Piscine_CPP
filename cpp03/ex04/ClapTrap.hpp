@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 16:14:10 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/13 12:43:01 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/11/18 11:13:16 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,17 @@
 #include <iostream>
 #include <sstream>
 #include "ClapTrapConst.hpp"
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
 
-class	ClapTrap : public FragTrap, public ScavTrap
+class	ClapTrap
 {
 public:
 
 	ClapTrap();
 	ClapTrap(std::string name);
 	ClapTrap(ClapTrap const &src);
-	~ClapTrap();
+	virtual ~ClapTrap();
 
 	ClapTrap	&operator=(ClapTrap const &instance);
-	void		init_var(void);
 	void		rangedAttack(std::string const &target) const;
 	void		meleeAttack(std::string const &target) const;
 	void		takeDamage(unsigned int amount);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 10:56:25 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/10/13 12:45:05 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/11/18 11:16:29 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,17 @@ void		ScavTrap::init_var(void)
 	return ;
 }
 
-ScavTrap::ScavTrap(void) : name("default")
+ScavTrap::ScavTrap(void) : ClapTrap()
 {
 	init_var();
-	std::cout << "Séquence d'initiation terminée." << std::endl;
+	std::cout << "Séquence d'initiation de SC4V-TP terminée." << std::endl;
 	return ;
 }
 
-ScavTrap::ScavTrap(std::string name) : name(name)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
 	init_var();
-	std::cout << "Séquence d'initiation terminée." << std::endl;
-	std::cout << ST_TEXT_PRESENTATION << std::endl;
+	std::cout << "Séquence d'initiation de SC4V-TP terminée." << std::endl;
 	return ;
 }
 
@@ -49,34 +48,6 @@ ScavTrap::~ScavTrap(void)
 {
 	std::cout << "Destruction de SC4V-TP " << this->name << std::endl;
 	return ;
-}
-
-void			ScavTrap::setName(std::string name)
-{
-	this->name = name;
-	return ;
-}
-
-std::string		ScavTrap::getValues(void) const
-{
-	std::stringstream	values;
-
-	values << ST_GET_VALUE_NAME << std::endl;
-	values << ST_GET_VALUE_HIT_POINT << std::endl;
-	values << ST_GET_VALUE_ENERGY << std::endl;
-	values << ST_GET_VALUE_LEVEL << std::endl;
-	values << ST_GET_VALUE_MELEE_ATTACK << std::endl;
-	values << ST_GET_VALUE_RANGED_ATTACK << std::endl;
-	values << ST_GET_VALUE_ARMOR_REDUCTION << std::endl;
-	return	values.str();
-}
-
-std::string		ScavTrap::getName(void) const
-{
-	std::stringstream name;
-
-	name << this->name;
-	return name.str();
 }
 
 ScavTrap		&ScavTrap::operator=(ScavTrap const &src)
@@ -96,40 +67,6 @@ std::ostream	&operator<<(std::ostream &o, ScavTrap const &instance)
 {
 	o << instance.getValues() << std::endl;
 	return o;
-}
-
-void		ScavTrap::rangedAttack(std::string const &target) const
-{
-	std::cout << ST_TEXT_RANGED_ATTACK << std::endl;
-	return ;
-}
-
-void		ScavTrap::meleeAttack(std::string const &target) const
-{
-	std::cout << ST_TEXT_MELEE_ATTACK << std::endl;
-	return ;
-}
-
-void		ScavTrap::takeDamage(unsigned int amount)
-{
-	if ((int)amount - this->armor_damage_reduction > this->hit_points)
-		this->hit_points = 0;
-	else
-		this->hit_points -= (amount - this->armor_damage_reduction);
-	std::cout << ST_TEXT_TAKE_DAMAGE << std::endl;
-	return ;
-}
-
-void		ScavTrap::beRepaired(unsigned int amount)
-{
-	this->hit_points += amount;
-	this->energy_points += amount;
-	if ((int)amount + this->hit_points > this->max_hit_points)
-		this->hit_points = this->max_hit_points;
-	if ((int)amount + this->energy_points > this->max_hit_energy)
-		this->energy_points = this->max_hit_energy;
-	std::cout << ST_TEXT_REPAIRED << std::endl;
-	return ;
 }
 
 void		ScavTrap::challengeNewcomer(std::string const &target)
@@ -155,6 +92,6 @@ void		ScavTrap::challengeNewcomer(std::string const &target)
 		this->energy_points -= 25;
 	}
 	else
-		std::cout << ST_TEXT_NO_ENERGY << std::endl;
+		std::cout << TEXT_NO_ENERGY << std::endl;
 	return ;
 }
