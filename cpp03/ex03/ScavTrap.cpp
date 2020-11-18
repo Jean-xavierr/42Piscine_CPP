@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 10:56:25 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/11/18 11:16:29 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/18 15:03:55 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	return ;
 }
 
-ScavTrap::ScavTrap(ScavTrap const &src)
+ScavTrap::ScavTrap(ScavTrap const &src) : ClapTrap(src)
 {
-	*this = src;
+	return ;
 }
 
 ScavTrap::~ScavTrap(void)

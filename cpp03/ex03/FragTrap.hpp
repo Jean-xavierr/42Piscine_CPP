@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 11:30:01 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/11/18 10:56:50 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/18 15:08:19 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <sstream>
 #include "ClapTrap.hpp"
 
-class	FragTrap : public ClapTrap
+class	FragTrap : virtual public ClapTrap
 {
 public:
 
