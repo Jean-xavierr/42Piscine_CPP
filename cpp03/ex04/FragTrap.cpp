@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 11:30:05 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/11/18 14:52:10 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/18 15:11:36 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	return ;
 }
 
-FragTrap::FragTrap(FragTrap const &src)
+FragTrap::FragTrap(FragTrap const &src) : ClapTrap(src)
 {
-	*this = src;
+	return ;
 }
 
 FragTrap::~FragTrap(void)
