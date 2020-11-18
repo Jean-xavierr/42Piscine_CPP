@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 14:45:50 by jereligi          #+#    #+#             */
-/*   Updated: 2020/11/18 14:52:38 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/18 15:14:23 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,9 @@ SuperTrap::SuperTrap(std::string name) : ClapTrap(name), FragTrap(name), NinjaTr
 	return ;
 }
 
-SuperTrap::SuperTrap(SuperTrap const &src)
+SuperTrap::SuperTrap(SuperTrap const &src) : ClapTrap(src)
 {
-	*this = src;
+	return ;
 }
 
 SuperTrap		&SuperTrap::operator=(SuperTrap const &src)
