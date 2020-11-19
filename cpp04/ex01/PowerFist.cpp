@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PowerFist.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 12:17:52 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/14 15:32:42 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/11/19 12:10:23 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ PowerFist::PowerFist(void) : AWeapon("Power Fist", 8, 50)
 	return ;
 }
 
-PowerFist::PowerFist(PowerFist const &src)
+PowerFist::PowerFist(PowerFist const &src) : AWeapon(src)
 {
-	*this = src;
+	return ;
 }
 
 PowerFist::~PowerFist(void)

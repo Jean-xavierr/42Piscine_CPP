@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PlasmaRifle.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 12:01:59 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/14 12:40:40 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/11/19 12:10:04 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ PlasmaRifle::PlasmaRifle(void) : AWeapon("Plasma Rifle", 5, 21)
 	return ;
 }
 
-PlasmaRifle::PlasmaRifle(PlasmaRifle const &src)
+PlasmaRifle::PlasmaRifle(PlasmaRifle const &src) : AWeapon(src)
 {
-	*this = src;
+	return ;
 }
 
 PlasmaRifle::~PlasmaRifle(void)
