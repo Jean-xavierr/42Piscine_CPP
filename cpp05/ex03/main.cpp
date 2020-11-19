@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/19 11:55:22 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/21 15:49:22 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/11/19 15:25:45 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,12 @@ int 		main(void)
 	Form		*badForm;
 
 	badForm = intern01.makeForm("badForm creation", "Shruberry_Form");
+	std::cout << std::endl;
+	badForm = intern01.makeForm("shrubbery creation", "Shruberry_Form");
 
+	std::cout << std::endl << *badForm << std::endl;
 
+	delete badForm;
 	delete shrubbery;
 	delete robot;
 	delete presidential;
