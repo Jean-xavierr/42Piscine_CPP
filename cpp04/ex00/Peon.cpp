@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 18:37:12 by jereligi          #+#    #+#             */
-/*   Updated: 2020/11/19 10:52:41 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/19 12:07:58 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@ Peon::Peon(std::string name) : Victim(name)
 	return ;
 }
 
-Peon::Peon(Peon const &src)
+Peon::Peon(Peon const &src) : Victim(src)
 {
-	*this = src;
+	std::cout << "Zog zog." << std::endl;
+	return ;
 }
 
 Peon::~Peon(void)
