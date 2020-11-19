@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 17:41:13 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/16 12:10:00 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/11/19 17:08:10 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ Character	&Character::operator=(Character const &src)
 			delete this->inventory[i];
 	if (src.inventory[0])
 		for (int i = 0; i < src.countMateria; i++)
-			this->inventory[i] = src.inventory[i];
+			this->inventory[i] = src.inventory[i]->clone();
 	this->countMateria = src.countMateria;
 	return (*this);
 }
