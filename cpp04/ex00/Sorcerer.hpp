@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Sorcerer.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 16:58:09 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/14 18:32:18 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/11/19 10:39:22 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	Sorcerer(std::string name, std::string title);
 	Sorcerer(Sorcerer const &src);
 	Sorcerer &operator=(Sorcerer const &src);
-	~Sorcerer();
+	virtual ~Sorcerer();
 
 	std::string		getName(void) const;
 	std::string		getTitle(void) const;

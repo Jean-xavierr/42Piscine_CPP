@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Peon.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 18:37:12 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/13 18:52:21 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/11/19 10:52:41 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,7 @@ Peon	&Peon::operator=(Peon const &src)
 
 std::string		Peon::getName(void) const
 {
-	std::stringstream value;
-
-	value << this->name;
-	return value.str();
+	return this->name;
 }
 
 void			Peon::getPolymorphed(void) const

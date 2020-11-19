@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Victim.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 18:20:13 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/13 18:52:14 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/11/19 10:52:25 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,7 @@ Victim	&Victim::operator=(Victim const &src)
 
 std::string		Victim::getName(void) const
 {
-	std::stringstream value;
-
-	value << this->name;
-	return value.str();
+	return this->name;
 }
 
 void			Victim::getPolymorphed(void) const

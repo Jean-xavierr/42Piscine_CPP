@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 18:14:30 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/13 18:55:50 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/11/19 10:46:32 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int		main(void)
 	Victim		jim("Jimmy");
 	Victim		*joe = new Peon("Joe");
 
-	std::cout << robert << jim << *joe;
+	std::cout << std::endl << robert << jim << *joe << std::endl;
 
 	robert.polymorph(jim);
 	robert.polymorph(*joe);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 12:10:45 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/14 15:37:36 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/11/19 11:20:00 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,28 +20,43 @@
 
 int		main(void)
 {
-	Character* moi = new Character("moi");
+	Character* Hero = new Character("Hero");
 
-	std::cout << *moi;
+	std::cout << *Hero << std::endl;
 
 	Enemy* b = new RadScorpion();
+	Enemy* s = new SuperMutant();
 
 	AWeapon* pr = new PlasmaRifle();
 	AWeapon* pf = new PowerFist();
 
-	moi->equip(pr);
-	std::cout << *moi;
-	moi->equip(pf);
+	Hero->equip(pr);
+	std::cout << *Hero;
+	Hero->equip(pf);
 
-	moi->attack(b);
-	std::cout << *moi;
-	moi->equip(pr);
-	std::cout << *moi;
-	moi->attack(b);
-	std::cout << *moi;
-	moi->attack(b);
-	std::cout << *moi;
+	Hero->attack(b);
+	std::cout << *Hero << std::endl;
+	Hero->equip(pr);
+
+	std::cout << *Hero;
+	Hero->attack(b);
+	std::cout << *Hero << std::endl;
+
+	Hero->attack(b);
+	std::cout << *Hero << std::endl;
+
+	Hero->attack(s);
+	std::cout << *Hero << std::endl;
+	std::cout << *s << std::endl;
+	Hero->attack(s);
+	std::cout << *Hero << std::endl;
+	std::cout << *s << std::endl;
+	Hero->attack(s);
+	Hero->attack(s);
+	Hero->attack(s);
 	
+	delete s;
+	delete Hero;
 	delete pr;
 	delete pf;
 	return 0;
