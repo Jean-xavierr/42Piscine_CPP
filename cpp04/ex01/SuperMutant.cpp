@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   SuperMutant.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 14:28:48 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/14 14:40:29 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/11/19 12:12:17 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@ SuperMutant::SuperMutant(void) : Enemy(170, "Super Mutant")
 	return ;
 }
 
-SuperMutant::SuperMutant(SuperMutant const &src)
+SuperMutant::SuperMutant(SuperMutant const &src) : Enemy(src)
 {
-	*this = src;
+	std::cout << "Gaaah. Break everything !" << std::endl;
+	return ;
 }
 
 SuperMutant::~SuperMutant(void)
