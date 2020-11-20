@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+         #
+#    By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/26 17:46:01 by jereligi          #+#    #+#              #
-#    Updated: 2020/10/26 17:46:50 by jereligi         ###   ########.fr        #
+#    Updated: 2020/11/20 13:44:03 by Jeanxavier       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CC			=	g++
 
 OBJS		=	$(SRCS:.cpp=.o)
 
-CFLAGS		+=	-Wall -Werror -Wextra
+CPPFLAGS		+=	-Wall -Werror -Wextra
 
 all			:	$(NAME)
 

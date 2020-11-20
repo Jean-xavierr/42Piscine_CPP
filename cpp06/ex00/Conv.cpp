@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Conv.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 15:32:58 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/26 15:09:14 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/11/20 12:19:14 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,19 @@
 void		convert_int(double n, std::string s)
 {
 
-	if (!isdigit(s[0]) && (s.length() == 3 || s.length() == 4))
+	if (!isdigit(s[0]) && (s.length() >= 3))
 		std::cout << "int: impossible" << std::endl;
 	else
-		std::cout << "int: " << static_cast<int>(n) << std::endl;
+		if (n > 2147483647  || n < -2147483648)
+			std::cout << "int: impossible" << std::endl;
+		else
+			std::cout << "int: " << static_cast<int>(n) << std::endl;
 }
 
 void		convert_char(double n, std::string s)
 {
 
-	if (!isdigit(s[0]) && (s.length() >= 3|| s.length() == 4))
+	if (!isdigit(s[0]) && (s.length() >= 3))
 		std::cout << "char: impossible" << std::endl;
 	else if (n > 32 && n < 127)
 		std::cout << "char: '" << static_cast<char>(n) << "'" << std::endl;
