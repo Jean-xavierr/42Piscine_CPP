@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+         #
+#    By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/28 17:11:58 by jereligi          #+#    #+#              #
-#    Updated: 2020/10/28 17:11:59 by jereligi         ###   ########.fr        #
+#    Updated: 2020/11/23 16:31:46 by Jeanxavier       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,16 +15,16 @@ NAME		=	array
 SRCS		=	Array.cpp 	\
 				main.cpp	\
 
-CC			=	g++
+CC			=	clang++
 
 OBJS		=	$(SRCS:.cpp=.o)
 
-CFLAGS		+=	-Wall -Werror -Wextra
+CPPFLAGS		+=	-Wall -Werror -Wextra
 
 all			:	$(NAME)
 
 $(NAME)		:	$(OBJS)
-				$(CC) -o $(NAME) $(CFLAGS) $(OBJS)
+				$(CC) -o $(NAME) $(CPPFLAGS) $(OBJS)
 
 clean		:
 				rm -rf $(OBJS)

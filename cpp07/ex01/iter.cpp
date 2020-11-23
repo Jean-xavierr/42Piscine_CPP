@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   iter.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 11:28:39 by jereligi          #+#    #+#             */
-/*   Updated: 2020/10/28 11:58:29 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/11/23 16:31:35 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,5 @@ int			main(void)
 	for (i = 0; i < 5; i++)
 		std::cout << tab2[i];
 	std::cout << std::endl;
-	
 	return 0;
 }

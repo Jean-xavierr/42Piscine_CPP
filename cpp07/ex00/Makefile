@@ -1,35 +1,23 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: jereligi <jereligi@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/10/28 11:23:29 by jereligi          #+#    #+#              #
-#    Updated: 2020/10/28 11:23:31 by jereligi         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+NAME = whatever
 
-NAME		=	whatever
+SRC = 	whatever.cpp	\
+		main.cpp		\
 
-SRCS		=	whatever.cpp \
-				main.cpp
+OBJ = $(SRC:.cpp=.o)
 
-CC			=	g++
+CC = clang++
 
-OBJS		=	$(SRCS:.cpp=.o)
+CPPFLAGS = -Wall -Wextra -Werror
 
-CFLAGS		+=	-Wall -Werror -Wextra
+all : $(NAME)
 
-all			:	$(NAME)
+$(NAME) :	$(OBJ)
+			$(CC) $(CPPFLAGS) -o $(NAME) $(OBJ)
 
-$(NAME)		:	$(OBJS)
-				$(CC) -o $(NAME) $(CFLAGS) $(OBJS)
+clean :
+			rm -rf $(OBJ)
 
-clean		:
-				rm -rf $(OBJS)
+fclean : clean
+			rm -rf $(NAME)
 
-fclean		:	clean
-				rm -f $(NAME)
-
-re			:	fclean all
+re : fclean all
