@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 14:30:28 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/11/05 16:52:57 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/25 14:30:38 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ public:
 	Span	&operator=(Span const &instance);
 	
 	void	addNumber(int nb);
+	void	addNumber(unsigned int from, unsigned int to, int value);
 	int		shortestSpan(void);
 	int		longestSpan(void);
 

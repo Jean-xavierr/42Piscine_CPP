@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 14:30:26 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/11/04 17:02:48 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/25 15:11:06 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,21 @@ void	Span::addNumber(int nb)
 {
 	if (this->vec.size() == this->n)
 		throw std::exception();
-	if (std::find(this->vec.begin(), this->vec.end(), nb) != this->vec.end())
-		throw std::exception();
+	// if (std::find(this->vec.begin(), this->vec.end(), nb) != this->vec.end())
+	// 	throw std::exception();
 	this->vec.push_back(nb);
+}
+
+void					Span::addNumber(unsigned int from, unsigned int to, int value)
+{
+	if (to >= this->n)
+		throw std::exception();
+	if (from >= to)
+		throw std::exception();
+	if (to > this->vec.size())
+		vec.resize(to);
+	std::vector<int>::iterator	it = this->vec.begin() + from;
+	std::fill(it, it + (to - from), value);
 }
 
 int		Span::shortestSpan(void)

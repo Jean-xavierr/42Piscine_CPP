@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 14:30:24 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/11/04 17:11:04 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/25 14:56:47 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,25 @@ int		main(void)
 	std::cout << "Longest: " << span3.longestSpan() << std::endl << std::endl;
 
 	Span	span4(50000);
-	for (int i = 0; i <= 50000; i += 2)
+	for (int i = 0; i <= 10000; i += 2)
 		span4.addNumber(i);
 	std::cout << "Test array[50000]" << std::endl;
 	std::cout << "Shortest: " << span4.shortestSpan() << std::endl;
 	std::cout << "Longest: " << span4.longestSpan() << std::endl << std::endl;
+
+	Span	span5(10);
+	span5.addNumber(0, 9, 42);
+	std::cout << "Test array[10]" << std::endl;
+	std::cout << "Shortest: " << span5.shortestSpan() << std::endl;
+	std::cout << "Longest: " << span5.longestSpan() << std::endl << std::endl;
+
+	Span	span6(15);
+	span6.addNumber(1);
+	span6.addNumber(5);
+	span6.addNumber(10);
+	span6.addNumber(3, 14, 20);
+	std::cout << "Test array[10]" << std::endl;
+	std::cout << "Shortest: " << span6.shortestSpan() << std::endl;
+	std::cout << "Longest: " << span6.longestSpan() << std::endl << std::endl;
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: Jeanxavier <Jeanxavier@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 15:35:23 by Jeanxavier        #+#    #+#             */
-/*   Updated: 2020/11/05 17:01:52 by Jeanxavier       ###   ########.fr       */
+/*   Updated: 2020/11/25 15:18:10 by Jeanxavier       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define MUTANTSTACK_HPP
 
 #include <iostream>
+#include <list>
 #include <stack>
 #include <deque>
 
